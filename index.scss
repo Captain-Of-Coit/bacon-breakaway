@@ -1,0 +1,25 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+}
+
+#inner {
+  position: absolute;
+  top: 10%;
+  margin-left: -250px;
+  width: 250px;
+  left: 50%;
+  text-align: center;
+  z-index: 1;
+}
+
+// canvas + #inner {
+//   display: none;
+// }
+
+canvas {
+  z-index: 2;
+  position: relative;
+}

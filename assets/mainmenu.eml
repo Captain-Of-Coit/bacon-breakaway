@@ -1,0 +1,6 @@
+<body s:flex-direction="column">
+    <span s:height="15px" />
+    <span s:width="50px" s:height="15px" s:background-color="blue" />
+    <span s:margin-left="50px" s:font-size="46px">Piggie Escape 2000</span>
+    <span s:width="50px" s:height="15px" s:background-color="rebeccapurple" />
+</body>

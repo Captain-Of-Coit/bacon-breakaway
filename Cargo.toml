@@ -1,0 +1,33 @@
+[package]
+name = "piggie-escape"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+belly = { git = "https://github.com/jkb0o/belly.git", version = "0.2.0" }
+bevy = { version = "=0.10.1", default-features = false }
+# bevy = { version = "=0.10.1", features = [] }
+bevy-debug-text-overlay = "5.1.0"
+bevy-inspector-egui = "0.18.3"
+bevy_asset_loader = "0.16.0"
+bevy_easings = "0.10.0"
+bevy_ecs_tilemap = { version = "0.10.0", features = ["atlas"]}
+bevy_kira_audio = { version = "0.15.0", features = ["mp3"] }
+bevy_math = "0.10.1"
+bevy_rapier2d = { version = "0.21.0", features = ["simd-stable", "debug-render-2d"] }
+iyes_progress = { version = "0.8.0", features = ["assets", "bevy_asset", "bevy_utils"] }
+rand = "0.8.5"
+rodio = "0.17.1"
+
+[features]
+default = ["bevy/wayland", "bevy/jpeg", "bevy/animation", "bevy/bevy_asset", "bevy/bevy_scene", "bevy/bevy_winit", "bevy/bevy_core_pipeline", "bevy/bevy_pbr", "bevy/bevy_gltf", "bevy/bevy_render", "bevy/bevy_sprite", "bevy/bevy_text", "bevy/bevy_ui", "bevy/png", "bevy/hdr", "bevy/zstd", "bevy/x11", "bevy/ktx2", "bevy/filesystem_watcher", "bevy/tonemapping_luts"]
+
+# Enable a small amount of optimization in debug mode
+[profile.dev]
+opt-level = 1
+
+# Enable high optimizations for dependencies (incl. Bevy), but not for our code:
+[profile.dev.package."*"]
+opt-level = 3
